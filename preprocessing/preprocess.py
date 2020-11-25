@@ -17,4 +17,4 @@ for vehicle_type, csv_list in incheon_drone.items():
     solution  = np.array(solution != 0).astype(int)
 
     graph     = np.savetxt(csv_list[0].split('.')[0] + '_v2.csv', graph, delimiter=',')
-    solution  = np.savetxt(csv_list[1].split('.')[0] + '_v2.csv', solution, delimiter=',')
+    solution  = np.savetxt(csv_list[1].split('.')[0].replace('_required', '_v2_required') + '.csv', solution, delimiter=',')
